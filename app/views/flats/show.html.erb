@@ -1,0 +1,19 @@
+<div class="what">
+  <div class="who">
+    <h2><%= @flat.name %></h2>
+    <div class="when">
+      <ul>
+        <li><%= @flat.address %></li>
+        <li>
+          <%= @flat.price_per_night %>
+          <%= @flat.number_of_guests %>
+        </li>
+        <li><%= @flat.description %></li>
+      </ul>
+      <%= link_to "Update", edit_flat_path(@flat) %>
+      <%= link_to "Delete", flat_path(@flat),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+
+    <div class="wrapper-gray">
+      <div class="container">
+        <div class="row">
+          <h2>Welcome <strong>2</strong> Air 3nP</h2>
+          <% @flats.each do |flat| %>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <%= link_to flat_path(flat) do %>
+                <div class="card" style="background-image: url('https://source.unsplash.com/random');">
+                  <h3><%= flat.name %></h3>
+                  <p>
+                    <%= flat.description %>
+                  </p>
+                </div>
+                <% end  %>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
